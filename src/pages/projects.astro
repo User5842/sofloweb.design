@@ -1,5 +1,16 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import ProjectComponent from "@components/Project.astro";
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Projects" />
+<MainLayout title="Projects">
+  <section class="flex flex-col gap-8">
+    <ProjectComponent
+      description={`Based in Broward County, FL, Omni Lawn offers expert lawn care services
+        to keep your yard healthy and beautiful.`}
+      heading="Omni Lawn"
+      imageDescription="lawn"
+      link="https://omnilawn.vercel.app/"
+    />
+  </section>
+</MainLayout>
