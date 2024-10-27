@@ -1,16 +1,25 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
 
+import { Image } from "astro:assets";
+import miami from "../assets/miami.jpg";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="SoFlo Web Design">
+  <p>
+    I was born and raised in Miami, FL. After doing software engineering for
+    seven years and realizing I have a knack for social skills and interpersonal
+    relationships, I wanted to improve my skills further.
+  </p>
+  <p>
+    SoFlo Web Design came from my desire to help other businesses succeed in the
+    digital world and provide them with the quality I deliver.
+  </p>
+  <Image alt="A description of my image." src={miami} />
+  <address>
+    Are you interested in creating an online presence? Reach out to me at <a
+      href="mailto:rafael.negron@sofloweb.design"
+      >rafael.negron@sofloweb.design</a
+    >.
+  </address>
+</MainLayout>
