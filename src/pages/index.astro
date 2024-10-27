@@ -1,8 +1,8 @@
 ---
-import MainLayout from "@layouts/MainLayout.astro";
+import { Picture } from "astro:assets";
 
-import { Image } from "astro:assets";
 import miami from "@assets/miami.jpg";
+import MainLayout from "@layouts/MainLayout.astro";
 ---
 
 <MainLayout title="SoFlo Web Design">
@@ -16,7 +16,7 @@ import miami from "@assets/miami.jpg";
       SoFlo Web Design came from my desire to help other businesses succeed in
       the digital world and provide them with the quality I deliver.
     </p>
-    <Image alt="A description of my image." src={miami} />
+    <Picture alt="A description of my image." formats={["webp"]} src={miami} />
     <address>
       Are you interested in creating an online presence? Reach out to me at <a
         href="mailto:rafael.negron@sofloweb.design"
