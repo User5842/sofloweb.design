@@ -5,7 +5,7 @@ const allPosts = await Astro.glob("./posts/*.md");
 ---
 
 <MainLayout title="Blog">
-  <section>
+  <section class="flex flex-col gap-8">
     {
       allPosts.map(({ frontmatter, url }) => (
         <a class="no-underline" href={url}>
