@@ -1,27 +1,10 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
-import miami from "@assets/miami.jpg";
+import skyline from "@assets/skyline.jpg";
 import MainLayout from "@layouts/MainLayout.astro";
 ---
 
-<MainLayout title="SoFlo Web Design">
-  <section>
-    <p>
-      I was born and raised in Miami, FL. After doing software engineering for
-      seven years and realizing I have a knack for social skills and
-      interpersonal relationships, I wanted to improve my skills further.
-    </p>
-    <p>
-      SoFlo Web Design came from my desire to help other businesses succeed in
-      the digital world and provide them with the quality I deliver.
-    </p>
-    <Picture alt="A description of my image." formats={["webp"]} src={miami} />
-    <address>
-      Are you interested in creating an online presence? Reach out to me at <a
-        href="mailto:rafael.negron@sofloweb.design"
-        >rafael.negron@sofloweb.design</a
-      >.
-    </address>
-  </section>
+<MainLayout>
+  <Image alt="" class="h-full object-cover" src={skyline} />
 </MainLayout>

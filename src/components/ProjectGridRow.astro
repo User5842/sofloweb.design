@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+
+import type { ProjectGridRow } from "@interfaces/ProjectGridRow.interface";
+
+const { columnCount, isHeader, rowData } = Astro.props as ProjectGridRow;
+---
+
+<div
+  class={`grid grid-cols-${columnCount} md:grid-cols-${columnCount} gap-4 ${isHeader && "font-semibold"}`}
+>
+  {
+    rowData.map((data) => {
+      function isImageMetadata(obj: any): obj is ImageMetadata {
+        return (
+          obj !== null &&
+          typeof obj === "object" &&
+          typeof obj.src === "string" &&
+          typeof obj.height === "number" &&
+          typeof obj.width === "number" &&
+          (obj.format === undefined || typeof obj.format === "string")
+        );
+      }
+
+      if (isImageMetadata(data)) {
+        return (
+          <div class="w-3/4">
+            <Image alt="" src={data} />
+          </div>
+        );
+      }
+
+      return <div class="min-w-0">{data}</div>;
+    })
+  }
+</div>
