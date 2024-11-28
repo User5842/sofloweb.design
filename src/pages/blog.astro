@@ -4,17 +4,20 @@ import MainLayout from "@layouts/MainLayout.astro";
 const allPosts = await Astro.glob("./posts/*.md");
 ---
 
-<MainLayout title="Blog">
-  <section class="flex flex-col gap-8">
+<MainLayout>
+  <div class="flex flex-col gap-4">
     {
       allPosts.map(({ frontmatter, url }) => (
         <a class="no-underline" href={url}>
           <div class="flex flex-col gap-2 p-6 shadow-md">
-            <h2 class="m-0">{frontmatter.title}</h2>
-            <p class="m-0 font-normal">{frontmatter.description}</p>
+            <time class="text-sm text-slate-400" datetime={frontmatter.date}>
+              {frontmatter.date.toString().slice(0, 10)}
+            </time>
+            <h2 class="text-2xl font-semibold">{frontmatter.title}</h2>
+            <p>{frontmatter.description}</p>
           </div>
         </a>
       ))
     }
-  </section>
+  </div>
 </MainLayout>

@@ -1,39 +1,37 @@
 ---
-const { title } = Astro.props;
+import "@styles/globals.css";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta
-      name="description"
-      content="Freelance web designer in South Florida, helping local businesses create stunning websites and enhance their online presence. Let's connect today!"
-    />
-    <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>SoFlo Web Design</title>
   </head>
-  <body>
-    <main class="container prose mx-auto min-h-screen max-w-xl p-4">
-      <header>
-        <h1 class="no-underline">
-          <a class="text-5xl font-bold text-orange-400 no-underline" href="/"
-            >SoFlo Web Design</a
-          >
-        </h1>
+  <body class="h-screen">
+    <main class="container mx-auto flex flex-col px-4 pb-4">
+      <header
+        class="items-left flex h-20 flex-col justify-center sm:flex-row sm:items-center sm:justify-between"
+      >
+        <h1><a href="/">SoFlo Web Design</a></h1>
         <nav>
-          <ul class="flex list-none gap-4 p-0">
-            <li class="p-0"><a href="/">Home</a></li>
-            <li class="p-0"><a href="/projects">Projects</a></li>
-            <li class="p-0"><a href="/blog">Blog</a></li>
-            <li class="p-0"><a href="/testimonials">Testimonials</a></li>
+          <ul class="flex items-center gap-4">
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li>
+              <a href="mailto:rafael.negron@sofloweb.design">Contact</a>
+            </li>
           </ul>
         </nav>
       </header>
-      <section>
+      <section class="flex-grow">
         <slot />
       </section>
     </main>
   </body>
 </html>
+
+<ViewTransitions />
