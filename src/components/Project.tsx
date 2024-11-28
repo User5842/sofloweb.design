@@ -10,7 +10,7 @@ export default function Project({ project }: { project: IProject }) {
     <div className="flex flex-col gap-4" onClick={toggleVisibility}>
       <div className="flex cursor-pointer items-center justify-between border-b border-b-black py-2">
         <h2>{project.name}</h2>
-        <span>+</span>
+        <span>{visible ? "-" : "+"}</span>
       </div>
       <div
         className={`flex flex-col gap-4 overflow-hidden transition-all duration-500 ease-in-out md:flex-row md:gap-16 ${visible ? "max-h-screen" : "max-h-0"}`}
