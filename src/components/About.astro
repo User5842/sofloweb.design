@@ -1,9 +1,9 @@
 ---
-import family from "@assets/family.jpg";
+import me from "@assets/me.webp";
 import { Image } from "astro:assets";
 ---
 
-<section class="mt-16 flex h-[70vh] gap-16 p-4" id="about">
+<section class="mt-16 flex h-[70vh] gap-28 p-4" id="about">
   <div class="flex h-full flex-1 flex-col justify-center text-left">
     <h2 class="text-4xl font-bold">Building Websites, One Idea at a Time</h2>
     <div class="mt-8">
@@ -20,6 +20,10 @@ import { Image } from "astro:assets";
     </div>
   </div>
   <div class="h-full flex-1">
-    <Image alt="" class="h-full w-full object-cover shadow-md" src={family} />
+    <Image
+      alt=""
+      class="h-full w-full rounded-lg object-cover shadow-md"
+      src={me}
+    />
   </div>
 </section>
