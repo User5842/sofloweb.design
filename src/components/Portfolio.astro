@@ -1,0 +1,32 @@
+---
+import omni from "@assets/omni.png";
+import { Image } from "astro:assets";
+---
+
+<section class="mt-16 p-4" id="portfolio">
+  <div class="text-center">
+    <h2 class="text-4xl font-bold">Portfolio</h2>
+    <p class="mt-8">Explore our recent design projects and innovations.</p>
+  </div>
+  <div
+    class="mt-8 flex flex-wrap items-center justify-center gap-8 lg:justify-around"
+  >
+    <div class="max-w-sm overflow-hidden rounded-lg shadow-lg">
+      <Image alt="" class="h-48 w-full object-cover" src={omni} />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Omni Lawns</h3>
+        <p class="mt-4 text-gray-600">
+          Omni Lawns kickstarted SoFlo Web Design, allowing me to establish a
+          great working relationship with Tiago--the owner.
+        </p>
+        <p class="mt-4 text-gray-600">
+          After designing, building, and launching a website from the ground up,
+          Omni Lawns has increased its conversions by 25%.
+        </p>
+        <a href="#" class="mt-4 block text-blue-500 hover:text-blue-700"
+          >Visit Omni Lawns</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+import family from "@assets/family.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="mt-16 flex h-[70vh] gap-16 p-4" id="about">
+  <div class="flex h-full flex-1 flex-col justify-center text-left">
+    <h2 class="text-4xl font-bold">Building Websites, One Idea at a Time</h2>
+    <div class="mt-8">
+      <p>
+        I've been in the enterprise software engineering space for 7+ years,
+        during which time I have worked on projects from inception through
+        design, implementation, and finally, release into customers' hands.
+      </p>
+      <p class="mt-4">
+        I wanted to expand my horizons and use empathy-driven principles to
+        create an agency that would focus on quality, customer satisfaction, and
+        innovation using modern technologies.
+      </p>
+    </div>
+  </div>
+  <div class="h-full flex-1">
+    <Image alt="" class="h-full w-full object-cover shadow-md" src={family} />
+  </div>
+</section>
