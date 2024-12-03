@@ -1,5 +1,6 @@
 ---
-
+import skyline from "@assets/skyline.jpg";
+import { Image } from "astro:assets";
 ---
 
 <section class="flex h-screen flex-col p-4">
@@ -61,7 +62,13 @@
         </div>
       </div>
     </div>
-    <div class="hidden flex-1 md:block" id="gradient"></div>
+    <div class="hidden flex-1 md:block">
+      <Image
+        alt=""
+        class="h-full w-full object-cover shadow-md"
+        src={skyline}
+      />
+    </div>
   </div>
 </section>
 
@@ -114,15 +121,5 @@
 
   .fade-out {
     animation: fadeOut 0.3s ease-in-out;
-  }
-
-  #gradient {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(121, 9, 9, 1) 48%,
-      rgba(0, 212, 255, 1) 100%
-    );
   }
 </style>

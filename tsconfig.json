@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
