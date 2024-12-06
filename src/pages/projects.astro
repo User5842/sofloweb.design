@@ -1,0 +1,56 @@
+---
+import omni from "@assets/omni.webp";
+import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+---
+
+<MainLayout>
+  <h2 class="text-2xl font-bold text-gray-800">Projects I've Worked On</h2>
+  <div class="space-y-8">
+    <div class="flex flex-col space-y-4 md:flex-row md:space-x-6 md:space-y-0">
+      <div class="flex-shrink-0">
+        <Image
+          alt="Project 1 screenshot"
+          class="h-48 w-full rounded-md object-cover shadow-md md:w-64"
+          src={omni}
+        />
+      </div>
+      <div class="flex flex-col space-y-4">
+        <h3 class="text-lg font-semibold text-gray-800">Omni Lawns</h3>
+        <div class="space-y-4 text-base leading-relaxed text-gray-700">
+          <p>
+            Omni Lawns was designed to establish an online presence in the <span
+              class="font-semibold text-blue-600"
+              >lawn care service industry</span
+            >. Implementing a <span class="italic text-gray-900">modern UI</span
+            >
+            helped to engage with customers and increase conversions by <span
+              class="font-bold text-green-600">30%</span
+            >.
+          </p>
+          <p>
+            I collaborated closely with the owner, Tiago, to understand his
+            needs and the message he wanted to send to his customers. As this
+            was Tiago's first business, and he was doing it to help his family
+            succeed in the future, his message would resonate with potential
+            clients.
+          </p>
+          <p>
+            A key learning experience was diving deeper into the innards of the <span
+              class="underline decoration-gray-500">Astro</span
+            >
+            and <span class="underline decoration-gray-500">Tailwind</span> frameworks
+            to provide a streamlined and modern workflow.
+          </p>
+        </div>
+        <a
+          href="https://example.com/project1"
+          class="inline-block font-medium text-blue-600 hover:underline"
+          target="_blank"
+        >
+          View Project &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</MainLayout>

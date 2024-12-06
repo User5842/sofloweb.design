@@ -1,9 +1,10 @@
 ---
-import Hero from "@components/Hero.astro";
+import skyline from "@assets/skyline.webp";
+import { Image } from "astro:assets";
 import { ViewTransitions } from "astro:transitions";
 ---
 
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,8 +12,29 @@ import { ViewTransitions } from "astro:transitions";
     <meta name="generator" content={Astro.generator} />
     <title>SoFlo Web Design</title>
   </head>
-  <body class="container mx-auto box-border">
-    <Hero />
+  <body class="bg-slate-700 px-2">
+    <section
+      class="container mx-auto flex h-full max-w-prose flex-col gap-4 border-x-8 border-b-8 border-x-slate-200 border-b-slate-200 bg-white px-4 pb-4"
+    >
+      <header>
+        <div class="relative h-56">
+          <Image alt="" class="h-full w-full object-cover" src={skyline} />
+          <h1 class="absolute bottom-4 right-4 text-lg text-white">
+            <a href="/">SoFlo Web Design</a>
+          </h1>
+        </div>
+        <nav class="border-t border-t-white bg-black px-4">
+          <ul class="flex items-center justify-end gap-4 text-white">
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="flex-1 space-y-8">
+        <slot />
+      </div>
+    </section>
   </body>
 </html>
 

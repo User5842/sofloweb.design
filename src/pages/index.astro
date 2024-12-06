@@ -1,27 +1,78 @@
 ---
-import About from "@components/About.astro";
-import Blog from "@components/Blog.astro";
-import Hero from "@components/Hero.astro";
-import Portfolio from "@components/Portfolio.astro";
-import Services from "@components/Services.astro";
-import { ViewTransitions } from "astro:transitions";
+import me from "@assets/me.webp";
+import MainLayout from "@layouts/MainLayout.astro";
+import { Image } from "astro:assets";
 ---
 
-<html class="scroll-smooth" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>SoFlo Web Design</title>
-  </head>
-  <body class="container mx-auto box-border">
-    <Hero />
-    <About />
-    <Services />
-    <Portfolio />
-    <Blog />
-  </body>
-</html>
-
-<ViewTransitions />
+<MainLayout>
+  <h2 class="text-2xl font-bold text-gray-800">
+    From Passion to Purpose: My Story
+  </h2>
+  <div>
+    <Image
+      alt="An image of me at EPCOT center in Disney World"
+      class="h-64 w-full object-cover shadow-md"
+      src={me}
+    />
+  </div>
+  <div class="space-y-4">
+    <p class="text-base leading-relaxed text-gray-700">
+      I’ve been in the <span class="font-medium text-gray-900"
+        >enterprise software engineering</span
+      > business for seven-plus years. During this time, I’ve worked on projects
+      from the whiteboard phase to implementation and finally into the hands of real
+      customers. I <span class="italic text-blue-600">love</span> it.
+    </p>
+    <p class="text-base leading-relaxed text-gray-700">
+      As the years went by, I realized I had a knack for <span
+        class="font-semibold text-gray-800">communication skills</span
+      >
+      and worked well with people. I always knew this, but I put it into practice
+      once I entered the workforce. I connected with people and enjoyed leading others
+      and helping out wherever I could.
+    </p>
+    <p class="text-base leading-relaxed text-gray-700">
+      This is the originating force behind my eventual starting of <span
+        class="font-semibold text-gray-900">SoFlo Web Design</span
+      >.
+    </p>
+    <p class="text-base leading-relaxed text-gray-700">
+      Having been born in South Florida (Miami, specifically), I wanted to use
+      my people skills to help others in the community develop an online
+      presence.
+    </p>
+  </div>
+  <div>
+    <h3 class="text-lg font-semibold text-gray-800">Promises I Make to You:</h3>
+    <ol class="list-inside list-decimal space-y-6 pl-6 pt-4">
+      <li class="rounded-md bg-gray-50 p-4 shadow-md">
+        <p class="font-bold text-gray-900">Stay Current</p>
+        <p class="text-gray-700">
+          I stay up-to-date with the latest trends and ensure your website is on
+          par with cutting-edge technologies. By combining modern techniques
+          with a deep understanding of user experience, I create websites that
+          look great and perform seamlessly across all devices.
+        </p>
+      </li>
+      <li class="rounded-md bg-gray-50 p-4 shadow-md">
+        <p class="font-bold text-gray-900">Exceptional Communication</p>
+        <p class="text-gray-700">
+          I pride myself on my <span class="font-medium"
+            >communication skills</span
+          > and fast response times. I prioritize client satisfaction by maintaining
+          open and proactive communication throughout every step of the process,
+          ensuring you’re always informed and confident.
+        </p>
+      </li>
+      <li class="rounded-md bg-gray-50 p-4 shadow-md">
+        <p class="font-bold text-gray-900">Comprehensive Solutions</p>
+        <p class="text-gray-700">
+          I offer complete solutions to your problems, including ongoing support
+          for maintenance, feature enhancements, troubleshooting, and more. From
+          concept to launch and beyond, I ensure your website evolves with your
+          business.
+        </p>
+      </li>
+    </ol>
+  </div>
+</MainLayout>

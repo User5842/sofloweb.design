@@ -1,0 +1,34 @@
+---
+import omni from "@assets/omni.webp";
+import { Image } from "astro:assets";
+---
+
+<section class="mt-12 snap-start p-4 lg:mt-28" id="testimonials">
+  <div class="text-center">
+    <h2 class="text-4xl font-bold">What People Are Saying</h2>
+  </div>
+  <div
+    class="mt-8 flex flex-wrap items-center justify-center gap-8 lg:justify-around"
+  >
+    <div
+      class="testimonial mx-auto max-w-prose rounded-lg bg-white p-6 text-center shadow-lg"
+    >
+      <p class="testimonial-text mb-4 text-lg italic text-gray-700">
+        Working with Rafael was such a great experience! He really took the time
+        to understand what I wanted for the site and nailed it with a design
+        that’s both updated and super easy to navigate. He was quick to answer
+        my questions, kept me in the loop the whole time, and even went above
+        and beyond with a few extra touches that made the site even better than
+        I’d hoped. If you’re looking for someone who’s easy to work with and
+        truly cares about the details, I can’t recommend Rafael enough!
+      </p>
+      <Image
+        alt=""
+        class="mx-auto mb-4 h-20 w-20 rounded-full object-cover"
+        src={omni}
+      />
+      <p class="person-info font-semibold text-gray-900">Tiago Beiter</p>
+      <p class="person-position text-sm text-gray-500">Owner, Omni Lawns</p>
+    </div>
+  </div>
+</section>
